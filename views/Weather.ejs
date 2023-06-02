@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/general.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/queries.css" />
+</head>
+
+<body>
+    <header class="header flex">
+        <a href="/info" class="btn" style="font-size: 1.5rem; margin:20px;">Back to Info page</a>
+    </header>
+
+    <main>
+        <section class="section section-crew">
+            <div class="container grid grid--2-col">
+                <div class="crew-img-box">
+                    <img class="crew-img" src="/images/outdoor.jpg"/>
+                </div>
+                <div style=" margin-top: 5rem;">
+                    <h2 class="heading-secondary title--border">
+                        Check the Weather Today!
+                    </h2>       
+
+                    <form action="/getWeather" method="post">
+                        <input type="submit" class="btn" style="font-size: 1.5rem; margin: 0 0 20px;" value="Get Weather">
+                        </form>
+                        <% if(weather !== null){ %>
+                        <p class="heading-secondary"><%= weather %></p>
+                        <% } %>
+                        <% if(error !== null){ %>
+                        <p class="heading-secondary"><%= error %></p>
+                        <% } %>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="" async defer></script>
+</body>
+
+</html>
